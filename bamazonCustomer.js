@@ -26,7 +26,7 @@ connection.query('SELECT * FROM Bamazon.products', function(err, response) {
     console.log(response);
 });
 
-// Inqueries on buying and selling 
+// Inqueries on buying w/ ID
 var start = function() {
     inquirer.prompt({
         name: "buyItem",
