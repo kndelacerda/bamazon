@@ -20,4 +20,5 @@ Below is a sequence of screenshots of the application in motion.
 ![Pic4](/images/pic4.png)
 
 5. The application will then check that it has the requested quantity of your chosen item in stock. Once this is complete, you will then be charged for your purchase and the inventory will update. You will then be able to make another purchase. 
-> ![Pic5](/images/pic5.png)
+<br> 
+![Pic5](/images/pic5.png)
