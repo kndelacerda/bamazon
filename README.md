@@ -19,6 +19,5 @@ Below is a sequence of screenshots of the application in motion.
 4. You will then be asked how many of this item you would like to purchase. 
 ![Pic4](/images/pic4.png)
 
-5. The application will then check that it has the requested quantity of your chosen item in stock. Once this is complete, you will then be charged for your purchase and the inventory will update. You will then be able to make another purchase. 
-</br>
+5. The application will then check that it has the requested quantity of your chosen item in stock. Once this is complete, you will then be charged for your purchase and the inventory will update. You will then be able to make another purchase. </br>
 ![Pic5](/images/pic5.png)
