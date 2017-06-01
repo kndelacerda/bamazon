@@ -46,9 +46,10 @@ function startStore() {
         }
     ]).then(function(order) {
         var quantityRequest = order.quantityRequest;
+        var idRequest = order.idRequest;
         connection.query('SELECT * FROM Bamazon.products WHERE item_id=' + idRequest, function(err, selectedItem) {
             if (err) throw err;
-            if (selectedItem[0].quantity - quantityRequest >= 0) {
+            if (selectedItem[0].stock_quantity - quantityRequest >= 0) {
                 console.log("Amount in stock: " + selectedItem[0].stock_quantity + "Order Quantity: " + quantityRequest);
                 console.log("You have been charged: " + (order.quantityRequest * selectedItem[0].price) + " dollars.");
                 connection.query('UPDATE Bamazon.products SET stock_quantity=? WHERE id=?', [selectedItem[0].stock_quantity - quantityRequest, item_id],
