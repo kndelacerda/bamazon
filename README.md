@@ -6,3 +6,5 @@ NPM Inquirer, prompt, and mysql were used in the making of this application.
 
 Below is a sequence of screenshots of the application in motion. 
 
+![Pic1](/images/pic1.png)
+Format: ![Alt Text](url)
