@@ -47,15 +47,18 @@ function startStore() {
     ]).then(function(order) {
         var quantityRequest = order.quantityRequest;
         var idRequest = order.idRequest;
-        connection.query('SELECT * FROM Bamazon.products WHERE item_id=' + idRequest, function(err, selectedItem) {
+        // var item_id = (connection.query('SELECT * FROM Bamazon.products'));
+        connection.query('SELECT * FROM Bamazon.products WHERE item_id =' + idRequest, function(err, selectedItem) {
             if (err) throw err;
             if (selectedItem[0].stock_quantity - quantityRequest >= 0) {
-                console.log("Amount in stock: " + selectedItem[0].stock_quantity + "Order Quantity: " + quantityRequest);
-                console.log("You have been charged: " + (order.quantityRequest * selectedItem[0].price) + " dollars.");
-                connection.query('UPDATE Bamazon.products SET stock_quantity=? WHERE id=?', [selectedItem[0].stock_quantity - quantityRequest, item_id],
+                console.log("Amount in stock: " + selectedItem[0].stock_quantity + ", Order Quantity: " + quantityRequest + ", Price: $" + selectedItem[0].price);
+                console.log("You have been charged: $" + (order.quantityRequest * selectedItem[0].price));
+                connection.query('UPDATE Bamazon.products SET stock_quantity=? WHERE item_id=?', [selectedItem[0].stock_quantity - quantityRequest, selectedItem[0].item_id],
                     function(err, response) {
                         if (err) throw err;
                         startStore();
+                        console.log("                      ");
+
                     });
             } else {
                 console.log("Oops! We do not have enough of that item. Currently, we have " + selectedItem[0].stock_quantity + " " + selectedItem[0].product_name + " in stock. Please lower your quantity or check back another time.");
