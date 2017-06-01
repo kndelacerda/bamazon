@@ -1,5 +1,6 @@
-This is a node based application that works in conjunection with the Bamazon database. 
 <h1>Bamazon Shopping</h1>
+
+This is a node based application that works in conjunction with the Bamazon database (see: schema.sql to recreate the database). 
 
 'Bamazon' is a database where products can be added, deleted or updated. 
 
