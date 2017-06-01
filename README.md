@@ -7,21 +7,16 @@ NPM Inquirer, prompt, and mysql were used in the making of this application.
 Below is a sequence of screenshots of the application in motion. 
 
 1. Enter node bamazonCustomer.js to activate the Customer View of the application. 
-![Pic1](/images/pic1.png)
-Format: ![Alt Text]
+![Pic1](/images/pic1.png)!
 
 2. Upon activation, the inventory will display in the terminal window. 
-![Pic2](/images/pic2.png)
-Format: ![Alt Text]
+![Pic2](/images/pic2.png)!
 
 3. Browse the inventory and enter the ID of the item you would like to purchase. 
-![Pic3](/images/pic3.png)
-Format: ![Alt Text]
+![Pic3](/images/pic3.png)!
 
 4. You will then be asked how many of this item you would like to purchase. 
-![Pic4](/images/pic4.png)
-Format: ![Alt Text]
+![Pic4](/images/pic4.png)!
 
 5. The application will then check that it has the requested quantity of your chosen item in stock. Once this is complete, you will then be charged for your purchase and the inventory will update. You will then be able to make another purchase. 
-![Pic5](/images/pic5.png)
-Format: ![Alt Text]
+![Pic5](/images/pic5.png)!
