@@ -1,14 +1,14 @@
 var mysql = require("mysql");
 var inquirer = require("inquirer");
+var prompt = require('prompt');
 
 // ** HOW TO CONNECT TO A DATABASE IN JS / NODE **
-var mysql = require("mysql");
 var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     // Your username
     user: "root",
-    // Your password
+    // Your password -- Removed for security 
     password: "Freedom22@",
     database: "Bamazon"
 });
@@ -23,14 +23,19 @@ connection.connect(function(err) {
 // How to print the database to the console & log errors
 connection.query('SELECT * FROM Bamazon.products', function(err, response) {
     if (err) throw err;
+    console.log("===================================================")
+    console.log("               Bamazon Inventory:                  ")
+    console.log("---------------------------------------------------")
     console.log(response);
+    console.log("===================================================")
+
 });
 
 // Inqueries on buying w/ ID
 var start = function() {
     inquirer.prompt({
         name: "buyItem",
-        type: "rawlist",
+        type: "input",
         message: "What is the ID of the item you would like to buy?",
         // choices: ["POST", "BID"]
     }).then(function(answer) {
